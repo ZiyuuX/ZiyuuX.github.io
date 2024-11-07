@@ -22,6 +22,20 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 ```shell
 sudo apt install -y ibus-rime
 # 安装之后，重启电脑于托盘位置设置
+```
+
+## Power Saver
+
+TLP is a highly configurable power saving tool for laptops. There is a flatpak called TLP gui or something if you want to tweak the config graphically (never tried it myself), or you can edit the config file directly. The default settings should be fine though.
+
+```shell
+sudo apt install tlp tlp-rdw smartmontools
+sudo systemctl enable --now tlp.serv
+```
+Then, reboot. You can check the current status of tlp with
+
+```shell
+sudo tlp-stat
 ```。">
 <meta property="og:title" content="Some applications on Linux Mint">
 <meta property="og:description" content="## Calibre
@@ -36,6 +50,20 @@ sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | 
 ```shell
 sudo apt install -y ibus-rime
 # 安装之后，重启电脑于托盘位置设置
+```
+
+## Power Saver
+
+TLP is a highly configurable power saving tool for laptops. There is a flatpak called TLP gui or something if you want to tweak the config graphically (never tried it myself), or you can edit the config file directly. The default settings should be fine though.
+
+```shell
+sudo apt install tlp tlp-rdw smartmontools
+sudo systemctl enable --now tlp.serv
+```
+Then, reboot. You can check the current status of tlp with
+
+```shell
+sudo tlp-stat
 ```。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ZiyuuX.github.io/post/Some%20applications%20on%20Linux%20Mint.html">
@@ -112,7 +140,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 sudo -v <span class="pl-k">&amp;&amp;</span> wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh <span class="pl-k">|</span> sudo sh /dev/stdin</pre></div>
 <h2>Rime 拼音输入法</h2>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sudo apt install -y ibus-rime
-<span class="pl-c"><span class="pl-c">#</span> 安装之后，重启电脑于托盘位置设置</span></pre></div></div>
+<span class="pl-c"><span class="pl-c">#</span> 安装之后，重启电脑于托盘位置设置</span></pre></div>
+<h2>Power Saver</h2>
+<p>TLP is a highly configurable power saving tool for laptops. There is a flatpak called TLP gui or something if you want to tweak the config graphically (never tried it myself), or you can edit the config file directly. The default settings should be fine though.</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo apt install tlp tlp-rdw smartmontools
+sudo systemctl <span class="pl-c1">enable</span> --now tlp.serv</pre></div>
+<p>Then, reboot. You can check the current status of tlp with</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">sudo tlp-stat</pre></div></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
